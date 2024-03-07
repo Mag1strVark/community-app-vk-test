@@ -1,5 +1,11 @@
+import { EventBusProvider } from './services/eventBus'
+
 const App = () => {
-  return <div></div>
+  return (
+    <EventBusProvider>
+      <div></div>
+    </EventBusProvider>
+  )
 }
 
 export default App

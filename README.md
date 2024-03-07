@@ -17,7 +17,7 @@
 yarn install
 
 # 2. Запуск JSON server
-yarn serv-json
+yarn serv
 
 # 3. Запустить React приложение
 yarn dev
