@@ -9,7 +9,7 @@ import Communities from './screen/Communities/page/Community'
 const App = () => {
   return (
     <EventBusProvider>
-      <div className="flex-column">
+      <div className="flex-page-center pageContent">
         <Communities />
       </div>
     </EventBusProvider>

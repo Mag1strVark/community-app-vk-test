@@ -1,3 +1,5 @@
+@import "variables";
+
 .flex-page-center {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,12 @@
   height: 100%;
   align-items: center;
   gap: 24px;
+}
+
+.pageContent {
+  flex: 1;
+  padding: 50px 30px;
+  background-color: $background;
 }
 
 .flex-space-between {
