@@ -12,6 +12,7 @@
     "serv": "json-server -w fakeapi/db.json -p 4000 -r fakeapi/routes.json"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

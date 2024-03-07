@@ -1,0 +1,175 @@
+@import "variables.scss";
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.input--error {
+  position: absolute;
+  bottom: -25px;
+}
+
+.text-input {
+  padding: 13px 16px;
+  border-radius: $border-radius;
+  outline: none;
+  box-shadow: 0 1px 3px 0 $border;
+  border: 1px solid $border;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text-input:disabled {
+  background: $background;
+  color: $text-disabled;
+  cursor: not-allowed;
+}
+
+.text-input:focus {
+  border: 1px solid $primary;
+}
+
+.text-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.text-input[data-size='small'] {
+  padding: 9px 12px;
+}
+
+.text-input[data-size='smallest'] {
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.text-input:invalid,
+.text-input[data-error='true'] {
+  border: 1px solid $error;
+  color: $error;
+}
+
+.text-input::-webkit-outer-spin-button,
+.text-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.text-input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+
+.button {
+  padding: 12px 16px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: $border-radius;
+  outline: none;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  transition: 0.3s;
+}
+
+.button span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button[data-loading='true'] {
+  cursor: not-allowed;
+}
+
+.button div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.button[data-loading='true'] div {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button[data-loading='true'] svg {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.button[data-loading='true']::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: $white;
+  border-radius: 50%;
+  animation: button-loading-spinner 1s ease infinite;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+.button[data-theme='primary'] {
+  background: $primary;
+  color: $white;
+}
+
+.button[data-theme='secondary'] {
+  background: $white;
+  color: $primary;
+  border: 1px solid $primary;
+}
+
+.button[data-theme='gray'] {
+  background: $background;
+}
+
+.button[data-size='small'] {
+  padding: 8px 31px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+.button[data-size='default'] {
+  padding: 13px 60px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.button:disabled {
+  background: $text-disabled !important;
+  color: $text-light;
+  cursor: not-allowed;
+}
+
+@keyframes button-loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}

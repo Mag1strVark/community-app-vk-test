@@ -1,0 +1,26 @@
+.filter {
+  margin: 20px 0;
+
+  &.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &.options {
+    display: flex;
+
+    button {
+      padding: 5px 10px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: transparent;
+      cursor: pointer;
+
+      &.active {
+        background-color: #007bff;
+        color: #fff;
+      }
+    }
+  }
+}

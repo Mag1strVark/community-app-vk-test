@@ -1,0 +1,62 @@
+.shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+  height: 100vh;
+  z-index: 998;
+  transition: 0.2s;
+}
+
+.shadow[data-open='true'] {
+  animation-duration: 0.3s;
+  animation-name: shadowAnimation;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.shadow[data-open='false'] {
+  animation-duration: 0.3s;
+  animation-name: cancelShadowAnimation;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.modal {
+  position: relative;
+  padding: 48px 32px 32px 32px;
+  border-radius: var(--border-radius);
+  background: var(--white);
+  margin-top: 10vh;
+  height: fit-content;
+  margin-bottom: 10vh;
+  min-width: 600px;
+}
+
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+
+@keyframes shadowAnimation {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--black-30);
+  }
+}
+
+@keyframes cancelShadowAnimation {
+  from {
+    background-color: var(--black-30);
+  }
+  to {
+    background-color: transparent;
+  }
+}
