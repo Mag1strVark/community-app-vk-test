@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom'
-import styles from './modal.module.css'
+import styles from './modal.module.scss'
 import { MouseEventHandler, PropsWithChildren } from 'react'
 import { htmlBodyElement } from '../../main.tsx'
 import { useTransition, a } from '@react-spring/web'

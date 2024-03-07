@@ -1,4 +1,4 @@
-import CloseIcon from '../../../assets/icons/exit.svg'
+import CloseIcon from '../../../assets/icons/exit.svg?react'
 import cn from '../../../utils/cn.ts'
 
 interface IProps {

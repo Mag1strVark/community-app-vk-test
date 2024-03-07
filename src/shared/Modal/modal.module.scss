@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .shadow {
   position: fixed;
   top: 0;
@@ -28,8 +30,8 @@
 .modal {
   position: relative;
   padding: 48px 32px 32px 32px;
-  border-radius: var(--border-radius);
-  background: var(--white);
+  border-radius: $border-radius;
+  background: $white;
   margin-top: 10vh;
   height: fit-content;
   margin-bottom: 10vh;
@@ -48,13 +50,13 @@
     background-color: transparent;
   }
   to {
-    background-color: var(--black-30);
+    background-color: $black-30;
   }
 }
 
 @keyframes cancelShadowAnimation {
   from {
-    background-color: var(--black-30);
+    background-color: $black-30;
   }
   to {
     background-color: transparent;
