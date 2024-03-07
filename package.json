@@ -9,7 +9,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "serv-json": "json-server -w fakeapi/db.json -p 4000 -r fakeapi/routes.json"
+    "serv": "json-server -w fakeapi/db.json -p 4000 -r fakeapi/routes.json"
   },
   "dependencies": {
     "axios": "^1.6.7",
@@ -27,7 +27,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "json-server": "^1.0.0-alpha.23",
+    "json-server": "^0.17.4",
     "prettier": "^3.2.5",
     "sass": "^1.71.1",
     "typescript": "^5.2.2",
