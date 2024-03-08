@@ -20,3 +20,8 @@ export interface User {
 export interface IPaginatedItems<T extends any> {
   data: T[]
 }
+
+export interface IOption<T> {
+  title: string | JSX.Element
+  value: T
+}

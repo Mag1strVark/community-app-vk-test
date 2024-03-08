@@ -9,9 +9,7 @@ import Communities from './screen/Communities/page/Community'
 const App = () => {
   return (
     <EventBusProvider>
-      <div className="flex-page-center pageContent">
-        <Communities />
-      </div>
+      <Communities />
     </EventBusProvider>
   )
 }
