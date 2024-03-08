@@ -61,7 +61,7 @@ const Communities = () => {
           onFilterChange={handleFilterChange}
         />
         <Filter
-          title="Цвет Автарки:"
+          title="Цвет Аватарки:"
           name="color"
           categories={avatarColours}
           onFilterChange={handleFilterChange}
