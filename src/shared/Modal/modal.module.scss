@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@import '../../styles/variables';
 
 .shadow {
   position: fixed;
@@ -43,7 +43,6 @@
   top: 24px;
   right: 24px;
 }
-
 
 @keyframes shadowAnimation {
   from {

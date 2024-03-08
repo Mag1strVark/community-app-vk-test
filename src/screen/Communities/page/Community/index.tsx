@@ -5,7 +5,7 @@ import PageHeader from '../../../../shared/PageHeader'
 import Loader from '../../../../shared/Loader'
 import CommunityItem from '../../components/CommunityItem'
 import { useState } from 'react'
-import CommunnityModal from '../../components/CommunnityModal'
+import CommunityModal from '../../components/CommunnityModal'
 import Filter from '../../../../shared/Filter'
 import { avatarColours, FriendsList, privacyGroup } from '../../../../utils/const.ts'
 
@@ -45,13 +45,10 @@ const Communities = () => {
     if (filters.friends !== null && !!group.friends !== filters.friends) {
       return false
     }
-    if (
+    return !(
       filters.color !== null &&
       group.avatar_color?.toLowerCase() !== filters.color.toLowerCase()
-    ) {
-      return false
-    }
-    return true
+    )
   })
 
   return (
@@ -89,11 +86,7 @@ const Communities = () => {
           </div>
         )}
       </div>
-      <CommunnityModal
-        onClose={() => setIsOpen(false)}
-        isOpen={isOpen}
-        users={userList}
-      />
+      <CommunityModal onClose={() => setIsOpen(false)} isOpen={isOpen} users={userList} />
     </div>
   )
 }

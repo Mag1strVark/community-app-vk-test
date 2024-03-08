@@ -8,7 +8,7 @@ interface IProps {
   users?: User[]
 }
 
-const FriendModal = (props: IProps) => {
+const CommunityModal = (props: IProps) => {
   return (
     <Modal isOpen={props.isOpen} onClose={props.onClose}>
       <div className="flex-column gap-32">
@@ -24,4 +24,4 @@ const FriendModal = (props: IProps) => {
   )
 }
 
-export default FriendModal
+export default CommunityModal
